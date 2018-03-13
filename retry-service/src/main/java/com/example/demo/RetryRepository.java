@@ -2,8 +2,8 @@ package com.example.demo;
 
 public interface RetryRepository {
 
-	int retry();
+	int getCount();
 
-	void clean();
+	void initializeCount();
 
 }

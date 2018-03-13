@@ -13,7 +13,7 @@ public class RetryServiceImpl implements RetryService {
 	}
 
 	@Override
-	public void crearCount() {
+	public void initializeCount() {
 		cnt = 0;
 	}
 

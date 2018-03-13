@@ -8,12 +8,12 @@ public class RetryRepositoryImpl implements RetryRepository {
 	private int cnt;
 	
 	@Override
-	public int retry() {
+	public int getCount() {
 		return cnt++;
 	}
 
 	@Override
-	public void clean() {
+	public void initializeCount() {
 		cnt = 0;
 	}
 

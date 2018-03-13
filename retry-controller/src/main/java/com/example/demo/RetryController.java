@@ -21,7 +21,7 @@ public class RetryController {
 	
 	@GetMapping("/{retryCount}")
 	@Retryable(value = RetryException.class, maxAttempts = 5, backoff = @Backoff(delay = 500))
-	public String m(@PathVariable int retryCount) {
+	public String retryMethod(@PathVariable int retryCount) {
 		int cnt = retryService.getCount();
 		if(cnt < retryCount) {
 			System.out.println("***** " + "RETRY! " + cnt);
@@ -36,7 +36,7 @@ public class RetryController {
     }
     
 	@GetMapping
-	public void crear() {
-		retryService.crearCount();
+	public void initializeCount() {
+		retryService.initializeCount();
 	}
 }

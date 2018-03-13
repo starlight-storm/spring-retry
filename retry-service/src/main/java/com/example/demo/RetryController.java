@@ -17,12 +17,12 @@ public class RetryController {
 	RetryService retryService;
 	
 	@GetMapping("/{retryCount}")
-	public String m(@PathVariable int retryCount) {
-		return retryService.retry(retryCount);
+	public String retryMethod(@PathVariable int retryCount) {
+		return retryService.retryMethod(retryCount);
 	}
     
 	@GetMapping
-	public void crean() {
-		retryService.clean();
+	public void initializeCount() {
+		retryService.initializeCount();
 	}
 }
